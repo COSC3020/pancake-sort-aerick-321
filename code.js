@@ -1,4 +1,8 @@
 function flip(array, n) {
+    
+    for(let i =0; i < n; i++){
+        
+    }
     return array;
 }
 
