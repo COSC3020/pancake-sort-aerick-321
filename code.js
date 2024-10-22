@@ -22,7 +22,7 @@ function pancakeSort(array) {
     var numSort = 0;
     while(numSort != array.length){
         var high = array[0];
-        for (i=0; i< (array.length- numSort0; i++){
+        for (let i=0; i< (array.length- numSort; i++){
             if (array[i] > high) {
                 high = array[i];
             }
