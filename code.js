@@ -21,37 +21,26 @@ function flip(array, n) {
 function pancakeSort(array) {
     var numSort = 0;
     while(numSort != array.length){
-        var high = array[0];
-        for (let j=0; i< (array.length- numSort); j++){
-            if (array[j] > high) {
-                high = array[j];
+       var high = array[0];
+        var highIndex = 0;
+        
+        // Find the highest value in the unsorted part
+        for (let i = 0; i < array.length - numSort; i++) {
+            if (array[i] > high) {
+                high = array[i];
+                highIndex = i;
             }
         }
-        if (high != array[0]){
-            n = 0;
-            while (n <= array.indexOf(high)){
-                n+= 1;
-                }
-            flip (array, n);
-            if (numSort == 0){
-                flip (array, (array.length + 1));
-                numSort += 1;
-                }
-            else {
-                flip (array, (array.length - numSort));
-                numSort += 1;
-                }
-            }
-        else {
-            if (numSort == 0){
-                flip (array, (array.length + 1));
-                numSort += 1;
-            }
-            else {
-                flip (array, (array.length - numSort));
-                numSort += 1;
-            }
+        
+        // Flip the highest value to the front, if not already at front
+        if (highIndex != 0) {
+            flip(array, highIndex + 1);
         }
+        
+        // Now flip it into its correct position
+        flip(array, array.length - numSort);
+        
+        numSort += 1;
     }
     return array;
 }
