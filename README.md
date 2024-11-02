@@ -29,6 +29,6 @@ What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
 number of comparisons? What is it in terms of the number of flips? Add your
 answer to this markdown file.
 
-The number of comparisions is O(n) because of the loop and in terms of the the number of flips it is 
+In terms of the number of comparisions it is O(n^2) it starts with n elements with a full array and with each iteration it has one less item to sort so n + (n-1) +(n-2)+...+ 1 becomes O(n^2). In terms of the the number of flips it is O(n) because there are two flips 2(n-1) and that becomes a constant time of O(n)
 
 Worked with Olivia, Megan, and Cole to complete this. Chat GPT helped simplify and make the pancake function more efficient after we wrote the code. “I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.”
